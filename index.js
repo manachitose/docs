@@ -35,7 +35,7 @@
      - url: 各サービスの自分のページURLに書き換えてください
      ============================================================ */
   var SOCIAL_LINKS = [
-    { label: "X",       icon: "assets/icons/x.svg",       url: "https://x.com/ManaChitose" },
+    { label: "Twitter",       icon: "assets/icons/x.svg",       url: "https://x.com/ManaChitose" },
     { label: "YouTube", icon: "assets/icons/youtube.svg", url: "https://www.youtube.com/@ManaChitose" },
     { label: "Wick",    icon: "assets/icons/wick.svg",    url: "https://wick-sns.com/sns/profile/eb87d56d-8860-4229-8835-e87f90ad5cba" },
     { label: "つなぐ",   icon: "assets/icons/tsunagu.svg", url: "https://tsunagu.cloud/users/ManaChitose" },

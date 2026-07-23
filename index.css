@@ -101,7 +101,7 @@ body {
 .top-band {
   position: relative;
   width: 100%;
-  height: 80px;
+  height: clamp(36px, 14vw, 80px);
   overflow: hidden;
   background: linear-gradient(120deg, var(--accent), var(--accent-2));
 }
@@ -126,9 +126,6 @@ body {
   background: rgba(255, 255, 255, 0.10);
 }
 
-@media (max-width: 560px) {
-  .top-band { height: 120px; }
-}
 
 /* ---------- hero ---------- */
 .hero {
@@ -224,7 +221,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
-  margin: 36px 0 8px;
+  margin: 13px 0 8px;
 }
 
 .social-link {
