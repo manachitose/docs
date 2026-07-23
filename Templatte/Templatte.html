@@ -31,18 +31,26 @@
         <a class="nav-link" href="#ch02"><span class="num">02</span>基本の流れ</a>
       </div>
       <div class="nav-group">
+        <div class="nav-group-label">使い方</div>
+        <a class="nav-link" href="#ch03"><span class="num">03</span>要素を追加・編集する</a>
+        <a class="nav-link" href="#ch04"><span class="num">04</span>キャンバス操作</a>
+        <a class="nav-link" href="#ch05"><span class="num">05</span>要素一覧(レイヤー)パネル</a>
+        <a class="nav-link" href="#ch06"><span class="num">06</span>テンプレート一覧画面の操作</a>
+        <a class="nav-link" href="#ch07"><span class="num">07</span>生成する</a>
+      </div>
+      <div class="nav-group">
         <div class="nav-group-label">詳細設定</div>
-        <a class="nav-link" href="#ch03"><span class="num">03</span>CSVを設定する</a>
-        <a class="nav-link" href="#ch04"><span class="num">04</span>日付フォーマット設定</a>
+        <a class="nav-link" href="#ch08"><span class="num">08</span>CSVを設定する</a>
+        <a class="nav-link" href="#ch09"><span class="num">09</span>日付フォーマット設定</a>
       </div>
       <div class="nav-group">
         <div class="nav-group-label">目的から選ぶ</div>
-        <a class="nav-link" href="#ch05"><span class="num">05</span>ユーザーストーリー別ガイド</a>
+        <a class="nav-link" href="#ch10"><span class="num">10</span>ユーザーストーリー別ガイド</a>
       </div>
       <div class="nav-group">
         <div class="nav-group-label">ファイルの扱い</div>
-        <a class="nav-link" href="#ch06"><span class="num">06</span>エクスポート・インポート</a>
-        <a class="nav-link" href="#ch07"><span class="num">07</span>よくある質問</a>
+        <a class="nav-link" href="#ch11"><span class="num">11</span>エクスポート・インポート</a>
+        <a class="nav-link" href="#ch12"><span class="num">12</span>よくある質問</a>
       </div>
     </nav>
   </aside>
@@ -109,7 +117,7 @@
         <li><strong>要素一覧</strong>(画面左): レイヤー(テキスト・画像・フォルダ)の並び順を管理します。並び順がそのまま重なり順(上にあるものが手前)になります</li>
         <li><strong>キャンバス</strong>(画面中央): 実際の見た目を確認しながら要素をドラッグ・リサイズできます</li>
         <li><strong>プロパティパネル</strong>(画面右): 選択中の要素の、位置・フォント・色・「値の出どころ」(固定文字/CSVなどのスロット/自動日付/連番/連番日付)を設定します</li>
-        <li><strong>プレビューデータバー</strong>(キャンバス上部): CSVを設定して、実際の値に近い見た目を確認しながら編集できます(3章で詳しく説明します)</li>
+        <li><strong>プレビューデータバー</strong>(キャンバス上部): CSVを設定して、実際の値に近い見た目を確認しながら編集できます(8章で詳しく説明します)</li>
       </ul>
       <p>ヘッダーには「保存」「名前を付けて保存」「お気に入り」「エクスポート」「設定」、そして実際に画像を量産する「生成...」ボタンが並びます。この章では細かい操作方法までは扱いません。以降の章では、特に質問の多い「CSV」「日付フォーマット」「エクスポート/インポート」に絞って説明します。</p>
 
@@ -120,13 +128,318 @@
 
       <div class="chapter-nav">
         <a class="prev" href="#ch01"><span class="dir">前へ</span>01. はじめに</a>
-        <a class="next" href="#ch03"><span class="dir">次へ</span>03. CSVを設定する</a>
+        <a class="next" href="#ch03"><span class="dir">次へ</span>03. 要素を追加・編集する</a>
       </div>
     </section>
 
     <!-- 03 -->
     <section class="chapter" id="ch03">
-      <div class="chapter-kicker"><span class="num">03</span><span class="label">詳細設定</span></div>
+      <div class="chapter-kicker"><span class="num">03</span><span class="label">使い方</span></div>
+      <h2 class="chapter-title">編集画面 &gt; 要素を追加・編集する</h2>
+      <p>テキスト・画像・フォルダの3種類の要素を、要素一覧パネルから追加し、プロパティパネルで見た目や「値の出どころ」を編集します。この章では、要素の追加・削除・複製・コピー&amp;ペーストと、プロパティパネルの設定項目をまとめて説明します。</p>
+
+      <h3>要素の追加</h3>
+      <ul>
+        <li>要素一覧パネル下部の「+テキストを追加」「+画像を追加」「+フォルダを追加」ボタンで、それぞれの要素を追加します。フォルダを選択中に追加すると、そのフォルダの中に追加されます</li>
+        <li>テキスト要素は初期文字列「テキスト」で追加され、画像要素は参照先が未設定のグレーのプレースホルダーとして追加されます</li>
+        <li>画像は、エクスプローラーからキャンバスへドラッグ&amp;ドロップして追加することもできます。複数ファイルを同時にドロップすると、ドロップした位置を中心に、重ならないよう少しずつずらして配置されます</li>
+      </ul>
+
+      <figure class="screenshot">
+        <img src="screenshots/ch03-add-buttons.png" alt="要素一覧パネル下部の「+テキストを追加」「+画像を追加」「+フォルダを追加」ボタン">
+        <figcaption>要素の追加ボタン(要素一覧パネル下部)</figcaption>
+      </figure>
+
+      <h3>要素の削除・複製・コピー&amp;ペースト</h3>
+      <ul>
+        <li><strong>削除</strong>: 要素一覧下部の「削除」ボタン、右クリックメニューの「削除」、または Delete / Backspace キー(キャンバス上・要素一覧のどちらを操作中でも可)。中身のあるフォルダを削除しようとすると、確認ダイアログが表示されます</li>
+        <li><strong>複製</strong>: 要素一覧の行を右クリックして「複製」を選ぶと、フォント・色などの設定ごと複製され、元の要素の隣に配置されます(フォルダ自体は複製できません)</li>
+        <li><strong>切り取り・コピー・貼り付け</strong>: Ctrl+X / Ctrl+C / Ctrl+V。OSのクリップボードを経由するため、別の編集ウィンドウを開いている場合はそちらへ貼り付けることもできます</li>
+      </ul>
+
+      <figure class="screenshot">
+        <img src="screenshots/ch03-context-menu.png" alt="要素一覧の右クリックメニュー。複製・削除などの項目が並んでいる">
+        <figcaption>要素一覧の右クリックメニュー</figcaption>
+      </figure>
+
+      <h3>プロパティパネルの設定項目(共通)</h3>
+      <p>要素を選択すると、画面右のプロパティパネルに設定項目が表示されます。テキスト・画像に共通する項目は次の通りです。</p>
+      <ul>
+        <li>位置(X・Y)、幅・高さ(スライダーと数値入力の両方で調整可能)</li>
+        <li>上下左右・中央寄せのワンクリックボタン</li>
+        <li>ブレンドモード(通常 / 乗算 / スクリーン / 加算 / 減算 / 比較(暗) / 比較(明) / 差の絶対値 / オーバーレイ / ソフトライト / ハードライト)</li>
+      </ul>
+
+      <h3>プロパティパネルの設定項目(テキスト要素)</h3>
+      <ul>
+        <li><strong>値の出どころ</strong>: 固定文字 / スロット(CSVの列) / 自動日付(基準日から何日後かと表示形式のプリセット) / 連番(開始〜終了とゼロ埋め桁数) / 連番日付(開始日〜終了日と表示形式)</li>
+        <li><strong>フォント</strong>: フォント名(インストール済みフォントを検索できるコンボボックス)、サイズ、色(#RRGGBB)、配置(左 / 中央 / 右)</li>
+        <li><strong>装飾</strong>: 縁取り(幅・色)、影(横ずれ・縦ずれ・ぼかし半径・色)</li>
+      </ul>
+
+      <h3>プロパティパネルの設定項目(画像要素)</h3>
+      <ul>
+        <li><strong>値の出どころ</strong>: 固定画像(「参照...」ボタンでファイルを選択。選択すると実寸に応じてサイズが自動調整されます) / スロット(CSVの列)</li>
+        <li><strong>配置方法</strong>: contain(全体を収める) / cover(はみ出しても埋める) / stretch(縦横比を無視して引き伸ばす)</li>
+        <li>「この画像の調整をリセット」ボタン: CSVプレビュー中にその行だけ個別調整した位置・サイズを削除し、既定値に戻します</li>
+      </ul>
+
+      <figure class="screenshot">
+        <img src="screenshots/ch03-properties-text.png" alt="テキスト要素選択時のプロパティパネル。値の出どころ・フォント・色・縁取り・影の設定項目が見える">
+        <figcaption>プロパティパネル(テキスト要素選択時)</figcaption>
+      </figure>
+      <figure class="screenshot">
+        <img src="screenshots/ch03-properties-image.png" alt="画像要素選択時のプロパティパネル。値の出どころ(参照ボタン)と配置方法(contain/cover/stretch)が見える">
+        <figcaption>プロパティパネル(画像要素選択時)</figcaption>
+      </figure>
+
+      <h3>複数選択時のプロパティパネル</h3>
+      <p>複数の要素を選択している間は、個別設定の代わりに次の一括操作が表示されます。</p>
+      <ul>
+        <li>端 / 中央揃え(横方向・縦方向)</li>
+        <li>等間隔配置(3つ以上選択している場合)</li>
+        <li>まとめて移動(X / Y方向のスライダー)</li>
+        <li>「フォルダにまとめる」ボタン(5章で説明する要素一覧のフォルダとして1つにグループ化)</li>
+      </ul>
+
+      <h3>テンプレート全体の設定</h3>
+      <p>要素を選択していないときも、プロパティパネルにはテンプレート全体に関わる設定が常に表示されます。</p>
+      <ul>
+        <li>背景色(#RRGGBB)、透過(チェックボックス)</li>
+        <li>自動日付の基準日(指定する / しないの切り替え、日付入力欄、「翌週」ボタン。詳しくは9章)</li>
+        <li>タグの追加・削除(既存タグの候補表示あり。テンプレート一覧画面での絞り込みに使われます。詳しくは6章)</li>
+      </ul>
+
+      <figure class="screenshot">
+        <img src="screenshots/ch03-template-settings.png" alt="要素未選択時のプロパティパネル。背景色・基準日・タグなどテンプレート全体の設定項目が見える">
+        <figcaption>プロパティパネル(テンプレート全体の設定)</figcaption>
+      </figure>
+
+      <div class="chapter-nav">
+        <a class="prev" href="#ch02"><span class="dir">前へ</span>02. 基本の流れ</a>
+        <a class="next" href="#ch04"><span class="dir">次へ</span>04. キャンバス操作</a>
+      </div>
+    </section>
+
+    <!-- 04 -->
+    <section class="chapter" id="ch04">
+      <div class="chapter-kicker"><span class="num">04</span><span class="label">使い方</span></div>
+      <h2 class="chapter-title">編集画面 &gt; キャンバス操作</h2>
+      <p>キャンバス上での選択・移動・リサイズ・ズームなど、マウスとキーボードによる操作をまとめます。</p>
+
+      <h3>選択</h3>
+      <ul>
+        <li>要素をクリックして選択します</li>
+        <li><strong>複数選択</strong>: Ctrl または Shift を押しながらクリック、あるいは何もない場所からドラッグしてラバーバンド(範囲選択)</li>
+        <li>Ctrl+A で全選択(ロック中の要素は対象外)</li>
+      </ul>
+
+      <h3>移動・リサイズ</h3>
+      <ul>
+        <li><strong>移動</strong>: 要素をドラッグ。Shiftを押しながらだと水平・垂直方向のどちらかにロックされます。矢印キーで1px移動(Shift併用で10px)</li>
+        <li><strong>リサイズ</strong>: 選択時に四隅へ表示されるハンドルをドラッグ。Ctrlを押しながらで縦横比を固定、Shiftを押しながらで片方の軸だけ伸縮</li>
+        <li>回転機能はありません(位置とサイズのみ調整できます)</li>
+      </ul>
+
+      <figure class="screenshot">
+        <img src="screenshots/ch04-resize-handles.png" alt="要素選択時にキャンバス上へ表示される四隅のリサイズハンドル">
+        <figcaption>選択時のリサイズハンドル</figcaption>
+      </figure>
+      <figure class="screenshot">
+        <img src="screenshots/ch04-multi-select.png" alt="何もない場所からドラッグして複数の要素をラバーバンドで範囲選択している状態">
+        <figcaption>ラバーバンドによる複数選択</figcaption>
+      </figure>
+
+      <h3>ロック・表示/非表示</h3>
+      <p>要素一覧パネルの各行にあるアイコンから切り替えます。</p>
+      <ul>
+        <li><strong>ロック(鍵アイコン)</strong>: ドラッグ・リサイズができなくなります(選択や数値入力での編集は可能)。ロック中の要素はクリックしても透過し、下に重なった要素を選択できます</li>
+        <li><strong>表示/非表示(目アイコン)</strong>: キャンバス上での表示・非表示を切り替えます。複数選択中は選択した要素全体に一括で適用されます</li>
+      </ul>
+
+      <h3>ズーム・パン・元に戻す</h3>
+      <ul>
+        <li><strong>ズーム</strong>: Alt を押しながらマウスホイール</li>
+        <li><strong>パン(表示位置の移動)</strong>: マウス中ボタンでドラッグ</li>
+        <li>一度手動でズーム・パンを操作すると、キャンバスの自動フィット表示は止まります。ヘッダーの「表示をリセット」ボタンで全体表示に戻せます</li>
+        <li><strong>元に戻す / やり直し</strong>: Ctrl+Z / Ctrl+Y(ヘッダーのアイコンボタンからも操作できます)</li>
+      </ul>
+
+      <table>
+        <thead><tr><th>操作</th><th>キー / マウス</th></tr></thead>
+        <tbody>
+          <tr><td>1px移動</td><td>矢印キー</td></tr>
+          <tr><td>10px移動</td><td>Shift + 矢印キー</td></tr>
+          <tr><td>水平・垂直方向にロックして移動</td><td>Shift + ドラッグ</td></tr>
+          <tr><td>縦横比を固定してリサイズ</td><td>Ctrl + ハンドルドラッグ</td></tr>
+          <tr><td>片方の軸だけリサイズ</td><td>Shift + ハンドルドラッグ</td></tr>
+          <tr><td>ズーム</td><td>Alt + マウスホイール</td></tr>
+          <tr><td>パン(表示位置移動)</td><td>マウス中ボタンドラッグ</td></tr>
+          <tr><td>全選択</td><td>Ctrl + A</td></tr>
+          <tr><td>元に戻す / やり直し</td><td>Ctrl + Z / Ctrl + Y</td></tr>
+          <tr><td>切り取り / コピー / 貼り付け</td><td>Ctrl + X / Ctrl + C / Ctrl + V</td></tr>
+          <tr><td>削除</td><td>Delete / Backspace</td></tr>
+        </tbody>
+      </table>
+
+      <div class="chapter-nav">
+        <a class="prev" href="#ch03"><span class="dir">前へ</span>03. 要素を追加・編集する</a>
+        <a class="next" href="#ch05"><span class="dir">次へ</span>05. 要素一覧(レイヤー)パネル</a>
+      </div>
+    </section>
+
+    <!-- 05 -->
+    <section class="chapter" id="ch05">
+      <div class="chapter-kicker"><span class="num">05</span><span class="label">使い方</span></div>
+      <h2 class="chapter-title">編集画面 &gt; 要素一覧(レイヤー)パネル</h2>
+      <p>画面左の要素一覧パネルでは、要素の重なり順や構造を管理します。並び順がそのままキャンバス上の重なり順(上にあるものが手前)になります。</p>
+
+      <h3>並び替え</h3>
+      <ul>
+        <li>行をドラッグ&amp;ドロップして並び替えます(フォルダの中へさらにフォルダを入れる、という入れ子はできません)</li>
+        <li>「上へ / 下へ」ボタンでも1段ずつ並び替えられます</li>
+      </ul>
+
+      <h3>行に表示されるアイコン・情報</h3>
+      <ul>
+        <li>表示/非表示アイコン、ロック/解除アイコン(4章参照)</li>
+        <li>種類バッジ(テキスト / 画像を区別するアイコン)</li>
+        <li>「値の出どころ」の要約(固定文字の内容、スロット名、自動日付の設定、固定画像のパスなど)がひと目で分かるよう各行に表示されます</li>
+      </ul>
+
+      <figure class="screenshot">
+        <img src="screenshots/ch05-layer-panel.png" alt="要素一覧パネル全体。並び順・表示非表示アイコン・ロックアイコン・種類バッジ・値の出どころの要約が見える">
+        <figcaption>要素一覧(レイヤー)パネル全体</figcaption>
+      </figure>
+
+      <h3>フォルダ</h3>
+      <p>複数の要素をまとめて管理するための入れ物です。</p>
+      <ul>
+        <li>名前はその場でクリックしてリネームできます</li>
+        <li>「ランダム」チェックボックス: 生成のたびにフォルダ内の要素から1つをランダムに選んで表示する設定です</li>
+        <li>開閉ボタンでフォルダ内の要素一覧を折りたたみ/展開できます</li>
+        <li>複数の要素を選択した状態で、プロパティパネルの「フォルダにまとめる」ボタンを押すと、選択した要素をまとめて新しいフォルダに入れられます(3章参照)</li>
+      </ul>
+
+      <figure class="screenshot">
+        <img src="screenshots/ch05-folder-group.png" alt="複数の要素をまとめたフォルダが要素一覧に展開表示されている状態">
+        <figcaption>フォルダにまとめた状態</figcaption>
+      </figure>
+
+      <div class="chapter-nav">
+        <a class="prev" href="#ch04"><span class="dir">前へ</span>04. キャンバス操作</a>
+        <a class="next" href="#ch06"><span class="dir">次へ</span>06. テンプレート一覧画面の操作</a>
+      </div>
+    </section>
+
+    <!-- 06 -->
+    <section class="chapter" id="ch06">
+      <div class="chapter-kicker"><span class="num">06</span><span class="label">使い方</span></div>
+      <h2 class="chapter-title">テンプレート一覧(ライブラリ)画面の操作</h2>
+      <p>アプリ起動時に表示される、テンプレートを探す・開くための画面です。</p>
+
+      <h3>ヘッダー</h3>
+      <ul>
+        <li>名前での検索欄</li>
+        <li>「テンプレート読み込み」: ファイルダイアログから既存の <code>.templatte</code> ファイルを開きます</li>
+        <li>「新規作成」: 真っさらなテンプレートを作成し、そのまま編集画面が開きます</li>
+        <li>サムネイル一括更新ボタン</li>
+      </ul>
+
+      <h3>サイドバーの絞り込み</h3>
+      <ul>
+        <li>お気に入り</li>
+        <li>最近使った(直近に編集した上位10件)</li>
+        <li>タグ(複数選択可能)</li>
+      </ul>
+      <p>これらの絞り込み条件は、すべてAND条件で組み合わせられます。</p>
+
+      <figure class="screenshot">
+        <img src="screenshots/ch06-library-top.png" alt="テンプレート一覧画面全体。左のサイドバーとサムネイル付きカード一覧が見える">
+        <figcaption>テンプレート一覧画面全体</figcaption>
+      </figure>
+      <figure class="screenshot">
+        <img src="screenshots/ch06-library-sidebar.png" alt="サイドバーのお気に入り・最近使った・タグによる絞り込みメニュー">
+        <figcaption>サイドバーの絞り込みメニュー</figcaption>
+      </figure>
+
+      <h3>カード</h3>
+      <p>1つのテンプレートにつき1枚のカードが表示され、次の情報・操作が並びます。</p>
+      <ul>
+        <li>サムネイル画像</li>
+        <li>お気に入り星チップ(サムネイル右上、クリックでON/OFF)</li>
+        <li>タイトル、キャンバスサイズ、タグチップ(最大2つ+件数)、最終編集の相対時間</li>
+        <li>「編集」ボタン、またはカード自体のクリックで編集画面が開きます</li>
+      </ul>
+
+      <h3>カードの「⋮」(ケバブ)メニュー</h3>
+      <ul>
+        <li><strong>ファイルの場所を開く</strong>: <code>.templatte</code> ファイルのあるフォルダをエクスプローラーで開きます</li>
+        <li><strong>zip出力</strong>: 11章で説明するエクスポートと同様に、参照画像を含めてZIP化します</li>
+        <li><strong>ライブラリから削除</strong>: 確認ダイアログの後、この一覧・お気に入り・タグ・生成履歴からのみ削除します。<code>.templatte</code> ファイルや画像自体は削除されません</li>
+      </ul>
+
+      <figure class="screenshot">
+        <img src="screenshots/ch06-library-card-menu.png" alt="テンプレートカードのケバブメニュー。ファイルの場所を開く・zip出力・ライブラリから削除の項目が見える">
+        <figcaption>カードのケバブメニュー</figcaption>
+      </figure>
+
+      <div class="callout note">
+        <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="13"/><circle cx="12" cy="16.3" r="0.6" fill="currentColor" stroke="none"/></svg></span>
+        <p><strong>「ライブラリから削除」はファイルを消しません。</strong> ファイルそのものを削除したい場合は、「ファイルの場所を開く」からエクスプローラーで直接操作してください。</p>
+      </div>
+
+      <div class="chapter-nav">
+        <a class="prev" href="#ch05"><span class="dir">前へ</span>05. 要素一覧(レイヤー)パネル</a>
+        <a class="next" href="#ch07"><span class="dir">次へ</span>07. 生成する</a>
+      </div>
+    </section>
+
+    <!-- 07 -->
+    <section class="chapter" id="ch07">
+      <div class="chapter-kicker"><span class="num">07</span><span class="label">使い方</span></div>
+      <h2 class="chapter-title">編集画面 &gt; 生成する</h2>
+      <p>編集画面ヘッダーの「生成...」から、実際に画像を量産します。どのスロットにどんな値を差し込むかは、あらかじめ各要素の「値の出どころ」(3章)やCSV設定(8章)に保存されているため、生成のたびに入力し直す必要はありません。</p>
+
+      <h3>生成ダイアログで入力する項目</h3>
+      <p>入力するのは次の2つだけです。</p>
+      <ul>
+        <li><strong>ファイル名ルール</strong>: 初期値はスロット名を <code>_</code> 区切りで並べたものです。<code>{スロット名}</code> の形でスロットの値をファイル名に埋め込めます</li>
+        <li><strong>出力形式</strong>: PNG または JPEG(選び方は12章のFAQ参照)</li>
+      </ul>
+
+      <h3>生成の流れ</h3>
+      <ol>
+        <li>「生成...」を押し、ファイル名ルールと出力形式を確認・入力する</li>
+        <li>「生成開始」を押す</li>
+        <li>出力先フォルダを選ぶダイアログが表示されるので、保存先フォルダを選ぶ</li>
+        <li>別スレッドで生成処理が始まり、ヘッダーの進捗バーが進む</li>
+        <li>完了すると完了ダイアログが表示される(「フォルダを開く」ボタンで出力結果をすぐ確認できます)</li>
+      </ol>
+
+      <figure class="screenshot">
+        <img src="screenshots/ch07-generate-dialog.png" alt="生成ダイアログ。ファイル名ルールの入力欄と出力形式(PNG/JPEG)の選択肢が見える">
+        <figcaption>生成ダイアログ</figcaption>
+      </figure>
+      <figure class="screenshot">
+        <img src="screenshots/ch07-generate-complete.png" alt="生成完了ダイアログ。フォルダを開くボタンが見える">
+        <figcaption>生成完了ダイアログ</figcaption>
+      </figure>
+
+      <div class="callout warn">
+        <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><line x1="12" y1="9" x2="12" y2="13"/><circle cx="12" cy="16.3" r="0.6" fill="currentColor" stroke="none"/></svg></span>
+        <p>画像要素の参照先ファイルが1件でも見つからない場合、その時点で一括生成は中断されます。詳しくは12章のFAQを参照してください。</p>
+      </div>
+
+      <div class="chapter-nav">
+        <a class="prev" href="#ch06"><span class="dir">前へ</span>06. テンプレート一覧画面の操作</a>
+        <a class="next" href="#ch08"><span class="dir">次へ</span>08. CSVを設定する</a>
+      </div>
+    </section>
+
+    <!-- 08 -->
+    <section class="chapter" id="ch08">
+      <div class="chapter-kicker"><span class="num">08</span><span class="label">詳細設定</span></div>
       <h2 class="chapter-title">編集画面 &gt; CSVを設定する</h2>
       <p>編集画面のキャンバス上部にある「CSVを設定」ボタンから、タイトル一覧などをまとめたCSVファイルを読み込めます。これは単なる「見た目の確認用プレビュー」ではなく、<strong>そのまま一括生成時の値の出どころにもなる、テンプレートに紐づく設定</strong>です。</p>
 
@@ -151,25 +464,25 @@
           <tr><td>固定文字 / 固定画像</td><td>常に同じ値。行ごとに変わらないロゴや見出しなど</td></tr>
           <tr><td>連番 / 連番日付</td><td>テンプレート自身が持つ設定(開始〜終了、桁数、日付範囲)から自動計算。CSVは不要</td></tr>
           <tr><td>スロット(CSV)</td><td>この章で設定したCSVの、同名の列の値</td></tr>
-          <tr><td>自動日付</td><td>基準日から指定日数ずらした日付・曜日(4章で詳しく説明)</td></tr>
+          <tr><td>自動日付</td><td>基準日から指定日数ずらした日付・曜日(9章で詳しく説明)</td></tr>
         </tbody>
       </table>
       <p>「連番」「連番日付」で名前を付けたスロットは、CSVを介さずにテンプレート単体で完結するため、CSVを用意しなくても一括生成できます。CSVが必要になるのは、行ごとに異なる自由なテキスト(タイトルなど)を差し込みたい場合です。</p>
 
       <figure class="screenshot">
-        <img src="../screenshots/ch03-preview-bar.png" alt="プレビューデータバー。CSVを設定ボタン・ファイル名リンク・前へ次へボタン">
+        <img src="screenshots/ch08-preview-bar.png" alt="プレビューデータバー。CSVを設定ボタン・ファイル名リンク・前へ次へボタン">
         <figcaption>プレビューデータバー(CSVを設定 / ファイル名リンク / 前へ・次へ)</figcaption>
       </figure>
 
       <div class="chapter-nav">
-        <a class="prev" href="#ch02"><span class="dir">前へ</span>02. 基本の流れ</a>
-        <a class="next" href="#ch04"><span class="dir">次へ</span>04. 日付フォーマット設定</a>
+        <a class="prev" href="#ch07"><span class="dir">前へ</span>07. 生成する</a>
+        <a class="next" href="#ch09"><span class="dir">次へ</span>09. 日付フォーマット設定</a>
       </div>
     </section>
 
-    <!-- 04 -->
-    <section class="chapter" id="ch04">
-      <div class="chapter-kicker"><span class="num">04</span><span class="label">詳細設定</span></div>
+    <!-- 09 -->
+    <section class="chapter" id="ch09">
+      <div class="chapter-kicker"><span class="num">09</span><span class="label">詳細設定</span></div>
       <h2 class="chapter-title">編集画面 &gt; 設定 &gt; 日付フォーマット設定</h2>
       <p>「自動日付」は、CSVも連番も使わずに、基準日からのずれ(オフセット)だけで日付・曜日を自動計算して表示する、テキスト要素専用の値の出どころです。毎週の配信スケジュール画像のように「月曜〜日曜の7つの日付欄」を並べる用途に向いています。</p>
 
@@ -208,27 +521,27 @@
       </div>
 
       <div class="chapter-nav">
-        <a class="prev" href="#ch03"><span class="dir">前へ</span>03. CSVを設定する</a>
-        <a class="next" href="#ch05"><span class="dir">次へ</span>05. ユーザーストーリー別ガイド</a>
+        <a class="prev" href="#ch08"><span class="dir">前へ</span>08. CSVを設定する</a>
+        <a class="next" href="#ch10"><span class="dir">次へ</span>10. ユーザーストーリー別ガイド</a>
       </div>
     </section>
 
-    <!-- 05 -->
-    <section class="chapter" id="ch05">
-      <div class="chapter-kicker"><span class="num">05</span><span class="label">目的から選ぶ</span></div>
+    <!-- 10 -->
+    <section class="chapter" id="ch10">
+      <div class="chapter-kicker"><span class="num">10</span><span class="label">目的から選ぶ</span></div>
       <h2 class="chapter-title">ユーザーストーリー別ガイド</h2>
       <p>「結局、自分の作りたいものにはどの機能を使えばいいのか」を、想定シーンごとにまとめました。</p>
 
       <div class="story-card">
         <span class="story-role">VTuber</span>
         <p class="story-quote">毎週配信スケジュール画像を作る際、日付と曜日を手入力せずに済ませたい</p>
-        <div class="story-answer"><span class="arrow">→</span><span>日付を表示するテキスト要素の「値の出どころ」を<strong>自動日付</strong>にし、月〜日の7要素をオフセット0〜6で並べます。基準日(週の初日)だけテンプレートに設定しておけば、曜日表記(<code>{weekday_ja}</code> など)を含めて自動計算されます。翌週分を作る際は基準日を書き換えるだけで済み、手入力は不要です(3〜4章)。</span></div>
+        <div class="story-answer"><span class="arrow">→</span><span>日付を表示するテキスト要素の「値の出どころ」を<strong>自動日付</strong>にし、月〜日の7要素をオフセット0〜6で並べます。基準日(週の初日)だけテンプレートに設定しておけば、曜日表記(<code>{weekday_ja}</code> など)を含めて自動計算されます。翌週分を作る際は基準日を書き換えるだけで済み、手入力は不要です(8〜9章)。</span></div>
       </div>
 
       <div class="story-card">
         <span class="story-role">動画投稿者</span>
         <p class="story-quote">CSVで用意したタイトル一覧から、サムネイルを一括生成したい</p>
-        <div class="story-answer"><span class="arrow">→</span><span>タイトルを表示するテキスト要素の「値の出どころ」を<strong>スロット</strong>にし、スロット名をCSVの列名と揃えます。編集画面で「CSVを設定」からタイトル一覧のCSVを読み込むと、その列名と一致するスロットにはCSVの値がそのまま使われます。あとは「生成...」でファイル名ルールと出力形式を決めれば、CSVの行数分だけサムネイルが一括生成されます(3章)。</span></div>
+        <div class="story-answer"><span class="arrow">→</span><span>タイトルを表示するテキスト要素の「値の出どころ」を<strong>スロット</strong>にし、スロット名をCSVの列名と揃えます。編集画面で「CSVを設定」からタイトル一覧のCSVを読み込むと、その列名と一致するスロットにはCSVの値がそのまま使われます。あとは「生成...」でファイル名ルールと出力形式を決めれば、CSVの行数分だけサムネイルが一括生成されます(8章)。</span></div>
       </div>
 
       <div class="story-card">
@@ -238,14 +551,14 @@
       </div>
 
       <div class="chapter-nav">
-        <a class="prev" href="#ch04"><span class="dir">前へ</span>04. 日付フォーマット設定</a>
-        <a class="next" href="#ch06"><span class="dir">次へ</span>06. エクスポート・インポート</a>
+        <a class="prev" href="#ch09"><span class="dir">前へ</span>09. 日付フォーマット設定</a>
+        <a class="next" href="#ch11"><span class="dir">次へ</span>11. エクスポート・インポート</a>
       </div>
     </section>
 
-    <!-- 06 -->
-    <section class="chapter" id="ch06">
-      <div class="chapter-kicker"><span class="num">06</span><span class="label">ファイルの扱い</span></div>
+    <!-- 11 -->
+    <section class="chapter" id="ch11">
+      <div class="chapter-kicker"><span class="num">11</span><span class="label">ファイルの扱い</span></div>
       <h2 class="chapter-title">テンプレートのエクスポート・インポートとファイルの扱い</h2>
 
       <h3>テンプレートは「フォルダ」で成り立っている</h3>
@@ -254,7 +567,7 @@
 ├── schedule.templatte
 └── assets/
     └── logo.png</pre>
-      <p>編集画面でテンプレートのフォルダの外にある画像を選ぶと、自動的に <code>assets/</code> フォルダへコピーしてから相対パスとして参照します。設定ダイアログの「assetsフォルダを開く」から、このフォルダをエクスプローラーで直接確認できます(4章参照)。相対パスで管理しているため、<strong>フォルダごと移動・コピーすればそのまま別の場所でも開けます。</strong></p>
+      <p>編集画面でテンプレートのフォルダの外にある画像を選ぶと、自動的に <code>assets/</code> フォルダへコピーしてから相対パスとして参照します。設定ダイアログの「assetsフォルダを開く」から、このフォルダをエクスプローラーで直接確認できます(9章参照)。相対パスで管理しているため、<strong>フォルダごと移動・コピーすればそのまま別の場所でも開けます。</strong></p>
 
       <h3>エクスポート(ZIPとして書き出す)</h3>
       <p><code>.templatte</code> ファイル1つだけを人に渡すと、参照している画像が付いてこず開けなくなってしまいます。これを避けるため、編集画面ヘッダーの「エクスポート...」から、<code>.templatte</code> 本体と参照画像すべてを1つのZIPファイルにまとめて書き出せます。</p>
@@ -278,27 +591,27 @@
       </div>
 
       <div class="chapter-nav">
-        <a class="prev" href="#ch05"><span class="dir">前へ</span>05. ユーザーストーリー別ガイド</a>
-        <a class="next" href="#ch07"><span class="dir">次へ</span>07. よくある質問</a>
+        <a class="prev" href="#ch10"><span class="dir">前へ</span>10. ユーザーストーリー別ガイド</a>
+        <a class="next" href="#ch12"><span class="dir">次へ</span>12. よくある質問</a>
       </div>
     </section>
 
-    <!-- 07 -->
-    <section class="chapter" id="ch07">
-      <div class="chapter-kicker"><span class="num">07</span><span class="label">ファイルの扱い</span></div>
+    <!-- 12 -->
+    <section class="chapter" id="ch12">
+      <div class="chapter-kicker"><span class="num">12</span><span class="label">ファイルの扱い</span></div>
       <h2 class="chapter-title">よくある質問</h2>
 
       <h4>CSVを設定したのに、一部の項目だけプレースホルダーのままなのはなぜ?</h4>
       <p>CSVの列名と、要素の「スロット名」が一致していない可能性があります。列名とスロット名は完全一致でしか対応付けられません。名前を揃えるか、その要素の値の出どころを見直してください。</p>
 
       <h4>日付フォーマットの編集を保存したら、表示がおかしくなった</h4>
-      <p>日付フォーマット設定は保存前の内容チェックを行わない、プレーンテキストの編集画面です。書式が壊れている場合、アプリ側が既定のプリセットに自動的にフォールバックして読み込みます。書式コード早見表(4章の表)を参考に、記法を見直してください。</p>
+      <p>日付フォーマット設定は保存前の内容チェックを行わない、プレーンテキストの編集画面です。書式が壊れている場合、アプリ側が既定のプリセットに自動的にフォールバックして読み込みます。書式コード早見表(9章の表)を参考に、記法を見直してください。</p>
 
       <h4>出力形式は JPEG と PNG のどちらを選べばよい?</h4>
       <p>背景を透過させたい(装飾画像の背後を透明にしたい)場合は PNG を選びます。JPEG は透過を保持できないため、テンプレートの背景に透過を含む場合は PNG を選んでください。</p>
 
       <h4>テンプレートを複数のPCで使い回したい</h4>
-      <p>6章のエクスポート(ZIP化)→ 手動解凍 →「テンプレート読み込み」の手順で持ち運べます。画像は同梱されますが、フォントは同梱されないため、使用フォントは移行先のPCにも別途インストールしておく必要があります。</p>
+      <p>11章のエクスポート(ZIP化)→ 手動解凍 →「テンプレート読み込み」の手順で持ち運べます。画像は同梱されますが、フォントは同梱されないため、使用フォントは移行先のPCにも別途インストールしておく必要があります。</p>
 
       <h3>エラーが出たときは</h3>
 
@@ -307,14 +620,14 @@
 
       <div class="callout warn">
         <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><line x1="12" y1="9" x2="12" y2="13"/><circle cx="12" cy="16.3" r="0.6" fill="currentColor" stroke="none"/></svg></span>
-        <p>文字コードの自動判定は完璧ではありません。まれに、Shift-JISのCSVが偶然UTF-8としても読める(文字化けしたまま気づかず生成してしまう)ケースがありえます。生成前のプレビュー(3章)で日本語が正しく表示されているか、必ず一度確認してください。</p>
+        <p>文字コードの自動判定は完璧ではありません。まれに、Shift-JISのCSVが偶然UTF-8としても読める(文字化けしたまま気づかず生成してしまう)ケースがありえます。生成前のプレビュー(8章)で日本語が正しく表示されているか、必ず一度確認してください。</p>
       </div>
 
       <h4>「生成...」を実行すると、途中でエラーが出て止まる</h4>
       <p>画像要素(固定画像・CSV等で差し込む画像)の参照先ファイルが見つからない場合、Templatteは<strong>1件でも見つからないと、その時点で一括生成を中断</strong>します(気づかないまま大量に出力してしまうことを避けるためです)。エラーメッセージに表示されたファイルパスを確認し、ファイルが正しい場所にあるか、CSVに書いた相対パスが誤っていないかを見直してから再実行してください。</p>
 
       <div class="chapter-nav">
-        <a class="prev" href="#ch06"><span class="dir">前へ</span>06. エクスポート・インポート</a>
+        <a class="prev" href="#ch11"><span class="dir">前へ</span>11. エクスポート・インポート</a>
         <a href="#ch01"><span class="dir">最初へ戻る</span>01. はじめに</a>
       </div>
     </section>

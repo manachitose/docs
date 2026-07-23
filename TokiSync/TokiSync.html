@@ -19,7 +19,7 @@
 <div class="layout">
   <aside class="sidebar" id="sidebar">
     <div class="brand">
-      <span class="brand-mark">tk</span>
+      <span class="brand-logo"><img src="icons/TokiSync_ico.png" alt="TokiSync" style="width: 32px; height: 32px;"></span>
       <span class="brand-name">TokiSync</span>
     </div>
     <span class="brand-sub">使い方ガイド</span>
@@ -63,7 +63,7 @@
   <main class="content">
     <header class="doc-header">
       <p class="doc-eyebrow">TokiSync Usage Guide</p>
-      <h1 class="doc-title">TokiSync 使い方ガイド</h1>
+      <h1 class="doc-title"><img src="icons/TokiSync_文字入り.png" alt="" style="width:100%"></h1>
       <p class="doc-lede">配信や企画演出を「タイミング」で管理し、OBSへ表示するためのツール、TokiSyncの使い方をまとめています。左の目次から、気になる章へどうぞ。</p>
     </header>
 
@@ -621,11 +621,11 @@
       </figure>
 
       <h5 style="margin:20px 0 10px; font-size:14px; font-weight:700;">わんコメ側にテンプレートを設定する</h5>
-      <p>わんコメからTokiSyncへコメントを通知するには、専用のテンプレート（TokiSyncに同梱されているファイル一式）を、わんコメの「プラグイン」としてあらかじめ読み込んでおく必要があります。</p>
+      <p>わんコメからTokiSyncへコメントを通知するには、専用のテンプレートを、わんコメの「プラグイン」としてあらかじめ読み込んでおく必要があります。テンプレートはTokiSync本体には同梱されておらず、BOOTHから別途入手します。</p>
       <ol>
-        <li>オーバーレイ編集画面の「<strong>テンプレートのパスをコピー</strong>」ボタンを押し、テンプレートフォルダのパスをコピーします</li>
+        <li>BOOTHの配布ページから「<strong>TokiSync-onecomme-template</strong>」のzipをダウンロードし、任意のフォルダに展開します</li>
         <li>わんコメを開き、トップ画面から「プラグイン」の設定に進みます</li>
-        <li>「テンプレート追加」から、コピーしたフォルダを指定して読み込みます</li>
+        <li>「テンプレート追加」から、展開したフォルダを指定して読み込みます</li>
       </ol>
 
       <div class="screenshot-row">
@@ -638,19 +638,13 @@
           <figcaption>2. メニュー→プラグイン→テンプレート</figcaption>
         </figure>
       </div>
-      <div class="screenshot-row">
-        <figure class="screenshot">
-          <img src="screenshots/ch09-onecomme-setup-3-add.jpg" alt="テンプレートの追加操作">
-          <figcaption>3. テンプレートを追加する</figcaption>
-        </figure>
-        <figure class="screenshot">
-          <img src="screenshots/ch09-onecomme-template-path-button.png" alt="オーバーレイ管理画面のテンプレートのパスをコピーするボタン">
-          <figcaption>4. TokiSync側「テンプレートのパスをコピー」ボタン</figcaption>
-        </figure>
-      </div>
+      <figure class="screenshot">
+        <img src="screenshots/ch09-onecomme-setup-3-add.jpg" alt="テンプレートの追加操作">
+        <figcaption>3. テンプレートを追加する</figcaption>
+      </figure>
       <figure class="screenshot">
         <img src="screenshots/ch09-onecomme-setup-5-confirm.jpg" alt="テンプレートが読み込まれ、一覧に表示されている状態">
-        <figcaption>5. 一覧にテンプレートが表示されていれば設定完了</figcaption>
+        <figcaption>4. 一覧にテンプレートが表示されていれば設定完了</figcaption>
       </figure>
 
       <div class="callout warn">
@@ -660,6 +654,11 @@
 
       <h3>3. 詳細設定（何を再生するか）を追加する</h3>
       <p>イベントを選択し、「＋ 詳細設定を追加」で発火時に再生する内容を追加します。設定方法は4章を参照してください。</p>
+
+      <div class="callout note">
+        <span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="13"/><circle cx="12" cy="16.3" r="0.6" fill="currentColor" stroke="none"/></svg></span>
+        <p>「わんコメ連動」のイベントでは、TEXT種別の詳細設定の文字内容に<code>{name}</code>と入力しておくと、実際に発火した際にギフトを送った人の表示名へ自動的に置き換わります（例: <code>{name}さん、ありがとうございます！</code> → <code>〇〇さん、ありがとうございます！</code>）。ショートカットキーで発火した場合など、表示名が取得できない場合は<code>{name}</code>は空文字に置き換わります。</p>
+      </div>
 
       <h3>4. OBSに表示する</h3>
       <p>編集画面の右上に、選択中プリセットのPlayer画面URLが表示されます。このURLをOBSのBrowser Sourceに設定する手順は13章と同じです。オーバーレイのPlayer画面は、他のプリセット種別と異なりアラームに近い「イベント一覧」形式で表示され、各イベントのショートカットキーと概要を確認できます。</p>

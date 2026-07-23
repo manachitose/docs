@@ -117,24 +117,20 @@
 
   .brand {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: 8px;
     padding: 4px 10px 20px;
   }
-  .brand-mark {
-    font-family: var(--font-mono);
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 0.06em;
-    color: var(--accent);
-    border: 1px solid var(--accent);
-    border-radius: 4px;
+  .brand-logo {
+    display: flex;
+    align-items: center;
     padding: 1px 6px;
   }
   .brand-name {
     font-weight: 700;
     font-size: 16px;
     letter-spacing: 0.01em;
+    line-height: 1;
   }
   .brand-sub {
     display: block;
