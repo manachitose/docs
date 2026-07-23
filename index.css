@@ -8,7 +8,7 @@
   --text: #382a35;
   --text-muted: #7d6c79;
   --text-faint: #a4919f;
-  --accent: #8d233a;
+  --accent: #e2879b;
   --accent-2: #7a6ff0;
   --accent-soft: rgba(214, 85, 143, 0.10);
   --accent-ink: #ffffff;
@@ -135,7 +135,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 28px;
-  padding: 65px 0 40px;
+  padding-top: 65px;
 }
 
 .hero-main {
@@ -304,7 +304,6 @@ body {
   border-radius: var(--radius-l);
   border: 1px solid var(--border);
   background: var(--surface);
-  text-decoration: none;
   color: var(--text);
   box-shadow: var(--shadow);
   transition: transform 120ms ease, border-color 120ms ease;
@@ -312,6 +311,13 @@ body {
 .tool-card:hover {
   transform: translateY(-3px);
   border-color: var(--accent);
+}
+.tool-card-link {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
 }
 .tool-card-head {
   display: flex;
@@ -342,12 +348,29 @@ body {
   color: var(--text-muted);
   line-height: 1.7;
 }
-.tool-card-cta {
+.tool-card-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: flex-end;
+  gap: 6px;
   margin-top: auto;
   padding-top: 8px;
+}
+.tool-card-cta,
+.tool-card-booth {
   font-size: 12.5px;
   font-weight: 700;
   color: var(--accent);
+  text-decoration: none;
+}
+.tool-card-cta:hover,
+.tool-card-booth:hover {
+  text-decoration: underline;
+}
+.tool-card-booth.is-disabled {
+  color: var(--text-faint);
+  pointer-events: none;
 }
 
 /* ---------- footer ---------- */
