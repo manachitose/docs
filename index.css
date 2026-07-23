@@ -286,6 +286,40 @@ body {
   border-bottom: 1px solid var(--border-soft);
 }
 
+/* ---------- link list ---------- */
+.link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.link-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: var(--radius-m);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 120ms ease, background 120ms ease, transform 120ms ease;
+}
+.link-list-item:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  transform: translateY(-2px);
+}
+.link-list-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+.link-list-arrow {
+  flex: none;
+  color: var(--accent);
+  font-weight: 700;
+}
+
 /* ---------- tool cards ---------- */
 .tool-grid {
   display: grid;
