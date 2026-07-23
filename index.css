@@ -8,7 +8,7 @@
   --text: #382a35;
   --text-muted: #7d6c79;
   --text-faint: #a4919f;
-  --accent: #d6558f;
+  --accent: #8d233a;
   --accent-2: #7a6ff0;
   --accent-soft: rgba(214, 85, 143, 0.10);
   --accent-ink: #ffffff;
@@ -101,10 +101,9 @@ body {
 .top-band {
   position: relative;
   width: 100%;
-  height: 160px;
+  height: 80px;
   overflow: hidden;
   background: linear-gradient(120deg, var(--accent), var(--accent-2));
-  border-radius: 0 0 32px 32px;
 }
 .top-band::before,
 .top-band::after {
@@ -136,7 +135,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 28px;
-  padding: 36px 0 40px;
+  padding: 65px 0 40px;
 }
 
 .hero-main {
@@ -359,4 +358,33 @@ body {
   text-align: center;
   color: var(--text-faint);
   font-size: 12.5px;
+}
+
+/* ---------- bottom band ---------- */
+.bottom-band {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  overflow: hidden;
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+}
+.bottom-band::before,
+.bottom-band::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+}
+.bottom-band::before {
+  width: 260px;
+  height: 260px;
+  bottom: -140px;
+  left: -60px;
+}
+.bottom-band::after {
+  width: 160px;
+  height: 160px;
+  top: -100px;
+  right: 8%;
+  background: rgba(255, 255, 255, 0.10);
 }
