@@ -12,6 +12,15 @@
     link.addEventListener('click', closeNav);
   });
 
+  var toolsDropdown = document.getElementById('toolsDropdown');
+  if (toolsDropdown) {
+    document.addEventListener('click', function (e) {
+      if (toolsDropdown.open && !toolsDropdown.contains(e.target)) {
+        toolsDropdown.open = false;
+      }
+    });
+  }
+
   var progress = document.getElementById('progress');
   function updateProgress() {
     var scrollTop = window.scrollY;

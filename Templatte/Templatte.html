@@ -35,14 +35,12 @@
 
 <div class="layout">
   <aside class="sidebar" id="sidebar">
-    <a class="home-link" href="../index.html">← HOME</a>
     <div class="brand">
       <span class="brand-logo">
         <img src="icons/Templatte.svg" alt="Templatte" style="width: 32px; height: 32px;">
       </span>
       <span class="brand-name">Templatte</span>
     </div>
-    <span class="brand-sub">使い方ガイド</span>
 
     <nav>
       <div class="nav-group">
@@ -73,20 +71,27 @@
         <a class="nav-link" href="#ch12"><span class="num">12</span>よくある質問</a>
       </div>
     </nav>
-    <div class="sidebar-panel">
-      <details class="sidebar-accordion">
-        <summary>他のツール</summary>
-        <ul class="sidebar-links">
-          <li><a class="sidebar-link" href="../TokiSync/TokiSync.html">TokiSync</a></li>
-        </ul>
-      </details>
-    </div>
   </aside>
 
   <main class="content">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a class="breadcrumb-link" href="../index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <details class="breadcrumb-dropdown" id="toolsDropdown">
+        <summary class="breadcrumb-link">tools</summary>
+        <ul class="breadcrumb-menu">
+          <li><a href="../TokiSync/TokiSync.html">TokiSync</a></li>
+          <li><a href="../Templatte/Templatte.html" aria-current="page">Templatte</a></li>
+        </ul>
+      </details>
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-current">Templatte</span>
+    </nav>
+
     <header class="doc-header">
       <p class="doc-eyebrow">Templatte Usage Guide</p>
       <h1 class="doc-title"><img src="icons/Templatte_文字入り.svg" alt="Templatte" style="width: 100%;"></h1>
+      <span class="doc-store-link is-disabled">販売ページ準備中</span>
       <p class="doc-lede">「毎週・毎回同じレイアウトの画像を作る作業」を数十秒で終わらせるための、テンプレートベース画像生成ツール、Templatteの使い方をまとめています。左の目次から、気になる章へどうぞ。</p>
     </header>
 
