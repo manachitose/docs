@@ -63,15 +63,18 @@
       </div>
     </div>
 
+    <ul class="hero-meta">
+      <li><span class="meta-label">誕生日</span><span class="meta-value">11/18</span></li>
+      <li><span class="meta-label">デビュー</span><span class="meta-value">2026/06/01</span></li>
+      <li><span class="meta-label">FAタグ</span><a class="meta-value meta-link" href="https://x.com/hashtag/%E3%81%A1%E3%81%A8%E3%81%9B%E7%9B%A3%E8%A6%96%E7%B6%B2?src=hashtag_click&f=live" target="_blank" rel="noopener">#ちとせ監視網</a></li>
+    </ul>
+
     <!-- ソーシャルリンクは index.js の SOCIAL_LINKS 配列で管理しています。
-         増やす・減らす・順番を変えるのも index.js の編集だけで完結します。 -->
+         増やす・減らす・順番を変えるのも index.js の編集だけで完結します。
+         アイコンのみ表示（ラベルは視覚的に非表示、スクリーンリーダー用に残す） -->
     <div class="social-grid" id="socialGrid"></div>
   </header>
 
-  <!-- ============================================================
-       リンク集（ソーシャルリンクとは別の、フォーム等への導線）
-       増やす場合はこの .link-list-item をコピーして追記する
-       ============================================================ -->
   <section>
     <h2 class="section-title">Links</h2>
     <div class="link-list">
@@ -81,6 +84,10 @@
       </a>
       <a class="link-list-item" href="https://docs.google.com/forms/d/e/1FAIpQLSeLc3avdABeHgJtvaOs357s3Y19orNZZlB--WAcC0JT6T0anA/viewform?usp=publish-editor" target="_blank" rel="noopener">
         <span class="link-list-title">ご依頼フォーム</span>
+        <span class="link-list-arrow">→</span>
+      </a>
+      <a class="link-list-item" href="https://marshmallow-qa.com/9pmtcuq1lrhyjo3?t=GJxxnz&utm_medium=url_text&utm_source=promotion" target="_blank" rel="noopener">
+        <span class="link-list-title">マシュマロ</span>
         <span class="link-list-arrow">→</span>
       </a>
     </div>
@@ -125,6 +132,96 @@
           <span class="tool-card-booth is-disabled">準備中</span>
         </span>
       </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ご依頼価格イメージ
+       - 各カードの内容は index.js の PRICE_LINKS 配列で管理しています
+       - 画像・タイトル・価格・説明・リンク先を変える場合は index.js を編集
+       ============================================================ -->
+  <section>
+    <h2 class="section-title">ご依頼価格イメージ</h2>
+    <div class="price-intro">
+      <p>価格の参考に「つなぐ」の出品を提示させていただいております！<br>
+      が、TwitterのDMからもお受けしておりますのでお気軽にご相談ください✨<br>
+      お支払いは、銀行振込/つなぐでお受けしています</p>
+      <p>（当日〜３日以内にはお返事できるかと思います）</p>
+      <div class="price-notes">
+        <p>※ デザインなどで上下する可能性があるので、提示金額はあくまで参考価格です</p>
+        <p>※ イラスト/動くイラストの納期はだいたい1か月程度見ていただければ間に合うかと思います（VTuber活動用モデルはご相談ください）</p>
+      </div>
+    </div>
+
+    <div class="price-grid" id="priceGrid"></div>
+
+  </section>
+
+  <!-- ============================================================
+       その他（あまり見られない補足情報はアコーディオンで折りたたみ）
+       ============================================================ -->
+  <section>
+    <h2 class="section-title">その他</h2>
+    <div class="accordion-list">
+
+      <details class="accordion">
+        <summary>千歳愛のFA等について</summary>
+        <div class="accordion-body">
+          <ul class="info-list">
+            <li>ご自由に作成ください！ほかの方に依頼してもらってもOKです</li>
+            <li>千歳愛本人と混同するようなイラストをアイコンなどに使用することはお控えください</li>
+            <li>基本的には活動用のイラストは自主製作のものを利用しているので、その点はご留意を…</li>
+            <li>水着以上の露出があるものなどをSNSに投稿する際はセンシティブフィルターなどをつけてください</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="accordion">
+        <summary>コラボのお誘いなどについて</summary>
+        <div class="accordion-body">
+          <ul class="info-list">
+            <li>ゲーム配信は基本やっておりません！！ごめん！
+              <ul>
+                <li>平日の昼に１時間…とかで遊べるものなら、その時間だけやっていたりはします…（マイクラ鯖とかかな…）</li>
+              </ul>
+            </li>
+            <li>TRPG, マダミスは声掛けいただけるとルンルンで飛びつきたいです←</li>
+            <li>コラボ可能な時間は金土の夜（自身の活動含めて月に1~2回が限度）
+              <ul>
+                <li>短時間の録画とか凸待ちは割と行きます。教えてください。お願い！！！！</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="accordion">
+        <summary>通過済みシナリオ</summary>
+        <div class="accordion-body">
+          <ul class="info-list">
+            <li>クトゥルフ神話TRPG
+              <ul>
+                <li>狂気山脈</li>
+                <li>とある幸せな家族の話</li>
+                <li>…etc(追記予定)</li>
+              </ul>
+            </li>
+            <li>エモクロア
+              <ul>
+                <li>1074</li>
+                <li>…etc(追記予定)</li>
+              </ul>
+            </li>
+            <li>マダミス
+              <ul>
+                <li>狂気山脈~陰謀の分水嶺~</li>
+                <li>…etc(追記予定)</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </details>
 
     </div>
   </section>
