@@ -316,6 +316,7 @@
     text-decoration: none;
     font-size: 13.5px;
     font-weight: 700;
+    line-height: 1.8;
     transition: background 150ms ease, color 150ms ease;
   }
   .doc-store-link:hover {
@@ -327,6 +328,83 @@
     font-weight: 600;
     cursor: default;
   }
+
+  .doc-header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin: 0 0 18px;
+  }
+  .doc-header-actions .doc-store-link {
+    margin: 0;
+  }
+
+  /* ---------- share widget ---------- */
+  .share-widget {
+    position: relative;
+  }
+  .share-btn {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    padding: 8px 14px;
+    border-radius: var(--tokisync-radius-s);
+    border: 1px solid var(--tokisync-accent);
+    background: none;
+    color: var(--tokisync-accent);
+    font-family: var(--tokisync-font-sans);
+    font-size: 13.5px;
+    font-weight: 700;
+    line-height: 1.8;
+    cursor: pointer;
+    transition: background 150ms ease, color 150ms ease;
+  }
+  .share-btn:hover,
+  .share-btn[aria-expanded="true"] {
+    background: var(--tokisync-accent-soft);
+  }
+  .share-btn svg { display: block; }
+
+  .share-menu[hidden] {
+    display: none;
+  }
+  .share-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    min-width: 170px;
+    padding: 6px;
+    border-radius: var(--tokisync-radius-m);
+    border: 1px solid var(--tokisync-border);
+    background: var(--tokisync-surface);
+    box-shadow: var(--tokisync-shadow);
+  }
+  .share-menu-item {
+    display: block;
+    width: 100%;
+    padding: 9px 10px;
+    border: none;
+    border-radius: var(--tokisync-radius-s);
+    background: none;
+    color: var(--tokisync-text);
+    font-family: var(--tokisync-font-sans);
+    font-size: 13px;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .share-menu-item:hover {
+    background: var(--tokisync-accent-soft);
+    color: var(--tokisync-accent);
+  }
+
   .doc-lede {
     font-size: 16.5px;
     color: var(--tokisync-text-muted);
@@ -603,6 +681,7 @@
       box-shadow: var(--tokisync-shadow);
       cursor: pointer;
     }
+    .nav-toggle.is-open { display: none; }
     .content { padding: 90px 22px 100px; }
     .doc-title { font-size: 26px; }
   }

@@ -28,6 +28,78 @@
   });
 
   /* ============================================================
+     シェアボタン
+     - Web Share API対応環境（主にスマホ）ではOS標準の共有シートを開く
+     - 非対応環境ではXへの投稿／リンクコピーの簡易メニューを表示する
+     ============================================================ */
+  var shareBtn = document.getElementById("shareBtn");
+  var shareMenu = document.getElementById("shareMenu");
+  var shareTwitter = document.getElementById("shareTwitter");
+  var shareCopy = document.getElementById("shareCopy");
+
+  function copyFallback(text) {
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+
+  if (shareBtn) {
+    var shareData = {
+      title: document.title,
+      text: "千歳愛 | VTuber / クリエイター",
+      url: location.href
+    };
+
+    shareTwitter.href = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(shareData.text) + "&url=" + encodeURIComponent(shareData.url);
+
+    function closeShareMenu() {
+      shareMenu.hidden = true;
+      shareBtn.setAttribute("aria-expanded", "false");
+    }
+
+    shareBtn.addEventListener("click", function () {
+      if (navigator.share && location.protocol !== "file:") {
+        navigator.share(shareData).catch(function () {});
+        return;
+      }
+      var willOpen = shareMenu.hidden;
+      shareMenu.hidden = !willOpen;
+      shareBtn.setAttribute("aria-expanded", String(willOpen));
+    });
+
+    shareCopy.addEventListener("click", function () {
+      var done = function () {
+        var original = shareCopy.textContent;
+        shareCopy.textContent = "コピーしました！";
+        setTimeout(function () {
+          shareCopy.textContent = original;
+          closeShareMenu();
+        }, 1200);
+      };
+      if (navigator.clipboard && location.protocol !== "file:") {
+        navigator.clipboard.writeText(shareData.url).then(done).catch(function () {
+          copyFallback(shareData.url);
+          done();
+        });
+      } else {
+        copyFallback(shareData.url);
+        done();
+      }
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!shareMenu.hidden && !e.target.closest(".share-widget")) {
+        closeShareMenu();
+      }
+    });
+  }
+
+  /* ============================================================
      ソーシャルリンク一覧
      - ここに増減・並び替えを反映すれば画面側に自動反映されます
      - icon: assets/icons/ に置いたアイコン画像ファイル名
